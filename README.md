@@ -5,4 +5,5 @@ WordPressのボイラープレートである、[bedrock](https://roots.io/bedro
 ## How to use
 1. このリポジトリをcloneする
 1. `bedrock` 配下で `composer install` 
+1. gitルートで `docker-compose up`
 1. http://localhost:8082 にアクセス
