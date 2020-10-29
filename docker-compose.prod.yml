@@ -2,7 +2,7 @@ version: '3.4'
 
 services:
 
-  php-fpm:
+  php:
     build:
       context: .
       target: bedrockapp_php
@@ -11,6 +11,6 @@ services:
       context: .
       target: bedrockapp_nginx
     depends_on:
-      - php-fpm
+      - php
     ports:
       - "80:80"
