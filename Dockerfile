@@ -9,7 +9,6 @@ COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY bedrock/ /var/www
 
 WORKDIR /var/www
-RUN composer install
 
 FROM nginx:latest AS bedrockapp_nginx
 
