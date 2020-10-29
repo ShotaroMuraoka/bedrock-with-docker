@@ -5,6 +5,8 @@ services:
   apache-php:
     build: ./docker
     restart: always
+    ports:
+      - 80:80
     volumes:
       - ./bedrock:/var/www/html
 
