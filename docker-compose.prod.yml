@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+
+  apache-php:
+    build: ./docker
+    restart: always
+    volumes:
+      - ./bedrock:/var/www/html
+
+volumes:
+  apache-php:
