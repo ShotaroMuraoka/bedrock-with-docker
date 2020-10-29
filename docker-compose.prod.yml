@@ -1,14 +1,16 @@
-version: '3.1'
+version: '3.4'
 
 services:
 
-  apache-php:
-    build: ./docker
-    restart: always
+  php-fpm:
+    build:
+      context: .
+      target: bedrockapp_php
+  nginx:
+    build:
+      context: .
+      target: bedrockapp_nginx
+    depends_on:
+      - php-fpm
     ports:
-      - 80:80
-    volumes:
-      - ./bedrock:/var/www/html
-
-volumes:
-  apache-php:
+      - "80:80"
