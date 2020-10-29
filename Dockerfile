@@ -8,7 +8,8 @@ RUN apt-get install -y git
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 COPY bedrock/ /var/www/html
 
-WORKDIR /var/www
+WORKDIR /var/www/html
+RUN composer install
 
 FROM nginx:latest AS bedrockapp_nginx
 
