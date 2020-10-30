@@ -18,3 +18,5 @@ services:
       - php
     ports:
       - "80:80"
+    volumes:
+      - ./bedrock/web/app/uploads/:/var/www/html/web/app/uploads/

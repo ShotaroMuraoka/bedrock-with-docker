@@ -18,6 +18,8 @@ services:
       - php
     ports:
       - "8082:80"
+    volumes:
+      - ./bedrock/web/app/uploads/:/var/www/html/web/app/uploads/
   db:
     image: mysql:5.7
     environment:
