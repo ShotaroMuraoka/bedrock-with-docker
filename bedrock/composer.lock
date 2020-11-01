@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dbb019194e0b89bad2e7f93e6e0df977",
+    "content-hash": "d1effed93e3e1ce341af267d0a8fd3ab",
     "packages": [
         {
             "name": "composer/installers",
@@ -325,16 +325,16 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "5.5.1",
+            "version": "5.5.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.5.1"
+                "reference": "5.5.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.5.1",
-                "reference": "5.5.1"
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.5.3",
+                "reference": "5.5.3"
             },
             "require": {
                 "php": ">=5.3.2",
@@ -368,7 +368,7 @@
                     "type": "patreon"
                 }
             ],
-            "time": "2020-09-01T18:56:09+00:00"
+            "time": "2020-10-30T20:40:02+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -707,24 +707,6 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/app-log/"
-        },
-        {
-            "name": "wpackagist-theme/astra",
-            "version": "2.6.0",
-            "source": {
-                "type": "svn",
-                "url": "https://themes.svn.wordpress.org/astra/",
-                "reference": "2.6.0"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/theme/astra.2.6.0.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-theme",
-            "homepage": "https://wordpress.org/themes/astra/"
         }
     ],
     "packages-dev": [
