@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6c8c804dbc68c444e48519f61e457e1d",
+    "content-hash": "be8f0d9f45eb674b0eec8ab4ef990d39",
     "packages": [
         {
             "name": "composer/installers",
@@ -228,6 +228,16 @@
             "dist": {
                 "type": "zip",
                 "url": "https://downloads.wordpress.org/translation/plugin/google-sitemap-generator/4.1.1/ja.zip",
+                "reference": "master"
+            },
+            "type": "wordpress-language"
+        },
+        {
+            "name": "koodimonni-plugin-language/highlighting-code-block-ja",
+            "version": "1.2.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/highlighting-code-block/1.2.5/ja.zip",
                 "reference": "master"
             },
             "type": "wordpress-language"
@@ -1014,15 +1024,15 @@
         },
         {
             "name": "wpackagist-plugin/google-site-kit",
-            "version": "1.19.0",
+            "version": "1.20.0",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/google-site-kit/",
-                "reference": "tags/1.19.0"
+                "reference": "tags/1.20.0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/google-site-kit.1.19.0.zip"
+                "url": "https://downloads.wordpress.org/plugin/google-site-kit.1.20.0.zip"
             },
             "require": {
                 "composer/installers": "~1.0"
@@ -1047,6 +1057,24 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/google-sitemap-generator/"
+        },
+        {
+            "name": "wpackagist-plugin/highlighting-code-block",
+            "version": "1.2.6",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/highlighting-code-block/",
+                "reference": "tags/1.2.6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/highlighting-code-block.1.2.6.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/highlighting-code-block/"
         },
         {
             "name": "wpackagist-plugin/random-post-name",
@@ -1092,12 +1120,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "065a018d3b5c2c84a53db3347cca4e1b7fa362a6"
+                "reference": "e440567339d5fe93d9525e377c5e686b0b08bcca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/065a018d3b5c2c84a53db3347cca4e1b7fa362a6",
-                "reference": "065a018d3b5c2c84a53db3347cca4e1b7fa362a6",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/e440567339d5fe93d9525e377c5e686b0b08bcca",
+                "reference": "e440567339d5fe93d9525e377c5e686b0b08bcca",
                 "shasum": ""
             },
             "conflict": {
@@ -1395,7 +1423,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-01T20:01:47+00:00"
+            "time": "2020-11-07T16:07:08+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

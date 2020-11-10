@@ -58,6 +58,19 @@
           "reference": "master"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "koodimonni-plugin-language/highlighting-code-block-ja",
+        "type": "wordpress-language",
+        "version": "1.2.5",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/translation/plugin/highlighting-code-block/1.2.5/ja.zip",
+          "reference": "master"
+        }
+      }
     }
   ],
   "require": {
@@ -74,10 +87,12 @@
     "wpackagist-plugin/google-sitemap-generator": "^4.1",
     "wpackagist-plugin/wp-multibyte-patch":"2.9",
     "wpackagist-plugin/random-post-name":"1.0",
+    "wpackagist-plugin/highlighting-code-block":"1.2.6",
     "koodimonni-language/ja": "*",
     "koodimonni/composer-dropin-installer": "*",
     "koodimonni-plugin-language/google-site-kit-ja": ">=1.19.0",
-    "koodimonni-plugin-language/google-sitemap-generator-ja": ">=4.1.1"
+    "koodimonni-plugin-language/google-sitemap-generator-ja": ">=4.1.1",
+    "koodimonni-plugin-language/highlighting-code-block-ja": ">=1.2.5"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.6",
