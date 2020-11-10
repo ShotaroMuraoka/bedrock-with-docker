@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3572db80d210623ce543eb021904f0a",
+    "content-hash": "6c8c804dbc68c444e48519f61e457e1d",
     "packages": [
         {
             "name": "composer/installers",
@@ -142,6 +142,310 @@
                 }
             ],
             "time": "2020-04-07T06:57:05+00:00"
+        },
+        {
+            "name": "koodimonni-language/ja",
+            "version": "5.5.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/core/5.5.1/ja.zip"
+            },
+            "require": {
+                "koodimonni-plugin-language/akismet-ja": "*",
+                "koodimonni-plugin-language/bbpress-ja": "*",
+                "koodimonni-plugin-language/woocommerce-ja": "*",
+                "koodimonni-plugin-language/wordpress-importer-ja": "*",
+                "koodimonni-theme-language/twentyeleven-ja": "*",
+                "koodimonni-theme-language/twentyfifteen-ja": "*",
+                "koodimonni-theme-language/twentyfourteen-ja": "*",
+                "koodimonni-theme-language/twentysixteen-ja": "*",
+                "koodimonni-theme-language/twentyten-ja": "*",
+                "koodimonni-theme-language/twentythirteen-ja": "*",
+                "koodimonni-theme-language/twentytwelve-ja": "*",
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Full Wordpress translation (including themes and core plugins) for Japanese - ja",
+            "keywords": [
+                "Full-Package",
+                "Translation",
+                "Wordpress",
+                "ja",
+                "twentysixteen"
+            ]
+        },
+        {
+            "name": "koodimonni-plugin-language/akismet-ja",
+            "version": "4.1.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/akismet/4.1.7/ja.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress akismet translation for Japanese - ja",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "akismet",
+                "ja"
+            ]
+        },
+        {
+            "name": "koodimonni-plugin-language/bbpress-ja",
+            "version": "2.6.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/bbpress/2.6.5/ja.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress bbpress translation for Japanese - ja",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "bbpress",
+                "ja"
+            ]
+        },
+        {
+            "name": "koodimonni-plugin-language/google-site-kit-ja",
+            "version": "1.19.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/google-site-kit/1.19.0/ja.zip",
+                "reference": "master"
+            },
+            "type": "wordpress-language"
+        },
+        {
+            "name": "koodimonni-plugin-language/google-sitemap-generator-ja",
+            "version": "4.1.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/google-sitemap-generator/4.1.1/ja.zip",
+                "reference": "master"
+            },
+            "type": "wordpress-language"
+        },
+        {
+            "name": "koodimonni-plugin-language/woocommerce-ja",
+            "version": "4.6.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/woocommerce/4.6.1/ja.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress woocommerce translation for Japanese - ja",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "ja",
+                "woocommerce"
+            ]
+        },
+        {
+            "name": "koodimonni-plugin-language/wordpress-importer-ja",
+            "version": "0.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/plugin/wordpress-importer/0.7/ja.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress wordpress-importer translation for Japanese - ja",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "ja",
+                "wordpress-importer"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyeleven-ja",
+            "version": "3.5",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyeleven/3.5/ja.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyeleven translation for Japanese - ja",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "ja",
+                "twentyeleven"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyfifteen-ja",
+            "version": "2.7",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyfifteen/2.7/ja.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyfifteen translation for Japanese - ja",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "ja",
+                "twentyfifteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyfourteen-ja",
+            "version": "2.9",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyfourteen/2.9/ja.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyfourteen translation for Japanese - ja",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "ja",
+                "twentyfourteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentysixteen-ja",
+            "version": "2.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentysixteen/2.2/ja.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentysixteen translation for Japanese - ja",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "ja",
+                "twentysixteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentyten-ja",
+            "version": "3.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentyten/3.1/ja.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentyten translation for Japanese - ja",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "ja",
+                "twentyten"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentythirteen-ja",
+            "version": "3.1",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentythirteen/3.1/ja.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentythirteen translation for Japanese - ja",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "ja",
+                "twentythirteen"
+            ]
+        },
+        {
+            "name": "koodimonni-theme-language/twentytwelve-ja",
+            "version": "3.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/translation/theme/twentytwelve/3.2/ja.zip"
+            },
+            "require": {
+                "koodimonni/composer-dropin-installer": ">=0.2.3"
+            },
+            "type": "wordpress-language",
+            "description": "Wordpress twentytwelve translation for Japanese - ja",
+            "keywords": [
+                "Translation",
+                "Wordpress",
+                "ja",
+                "twentytwelve"
+            ]
+        },
+        {
+            "name": "koodimonni/composer-dropin-installer",
+            "version": "1.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Koodimonni/Composer-Dropin-Installer.git",
+                "reference": "2ebddd0ead26f52962be385dcc85057be4c5a69e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Koodimonni/Composer-Dropin-Installer/zipball/2ebddd0ead26f52962be385dcc85057be4c5a69e",
+                "reference": "2ebddd0ead26f52962be385dcc85057be4c5a69e",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.0 | ^2.0",
+                "php": ">=5.3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.7"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Koodimonni\\Composer\\Dropin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Koodimonni\\Composer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "WTFPL"
+            ],
+            "authors": [
+                {
+                    "name": "Onni Hakala",
+                    "email": "onni@koodimonni.fi",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Install packages or a few files from packages into custom paths without overwriting existing stuff.",
+            "time": "2020-08-17T07:41:05+00:00"
         },
         {
             "name": "oscarotero/env",
@@ -743,6 +1047,42 @@
             },
             "type": "wordpress-plugin",
             "homepage": "https://wordpress.org/plugins/google-sitemap-generator/"
+        },
+        {
+            "name": "wpackagist-plugin/random-post-name",
+            "version": "1.0",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/random-post-name/",
+                "reference": "trunk"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/random-post-name.zip?timestamp=1591960368"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/random-post-name/"
+        },
+        {
+            "name": "wpackagist-plugin/wp-multibyte-patch",
+            "version": "2.9",
+            "source": {
+                "type": "svn",
+                "url": "https://plugins.svn.wordpress.org/wp-multibyte-patch/",
+                "reference": "tags/2.9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-multibyte-patch.2.9.zip"
+            },
+            "require": {
+                "composer/installers": "~1.0"
+            },
+            "type": "wordpress-plugin",
+            "homepage": "https://wordpress.org/plugins/wp-multibyte-patch/"
         }
     ],
     "packages-dev": [
@@ -752,12 +1092,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/SecurityAdvisories.git",
-                "reference": "327370943772f9917bc2dc2aa4263db2d572a112"
+                "reference": "065a018d3b5c2c84a53db3347cca4e1b7fa362a6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/327370943772f9917bc2dc2aa4263db2d572a112",
-                "reference": "327370943772f9917bc2dc2aa4263db2d572a112",
+                "url": "https://api.github.com/repos/Roave/SecurityAdvisories/zipball/065a018d3b5c2c84a53db3347cca4e1b7fa362a6",
+                "reference": "065a018d3b5c2c84a53db3347cca4e1b7fa362a6",
                 "shasum": ""
             },
             "conflict": {
@@ -773,7 +1113,7 @@
                 "bagisto/bagisto": "<0.1.5",
                 "barrelstrength/sprout-base-email": "<1.2.7",
                 "barrelstrength/sprout-forms": "<3.9",
-                "baserproject/basercms": ">=4,<=4.3.6",
+                "baserproject/basercms": ">=4,<=4.3.6|>=4.4,<4.4.1",
                 "bolt/bolt": "<3.7.1",
                 "brightlocal/phpwhois": "<=4.2.5",
                 "buddypress/buddypress": "<5.1.2",
@@ -857,7 +1197,7 @@
                 "magento/magento1ee": ">=1,<1.14.4.3",
                 "magento/product-community-edition": ">=2,<2.2.10|>=2.3,<2.3.2-p.2",
                 "marcwillmann/turn": "<0.3.3",
-                "mediawiki/core": ">=1.31,<1.31.4|>=1.32,<1.32.4|>=1.33,<1.33.1",
+                "mediawiki/core": ">=1.31,<1.31.9|>=1.32,<1.32.4|>=1.33,<1.33.3|>=1.34,<1.34.3|>=1.34.99,<1.35",
                 "mittwald/typo3_forum": "<1.2.1",
                 "monolog/monolog": ">=1.8,<1.12",
                 "namshi/jose": "<2.2",
@@ -872,7 +1212,8 @@
                 "onelogin/php-saml": "<2.10.4",
                 "oneup/uploader-bundle": "<1.9.3|>=2,<2.1.5",
                 "openid/php-openid": "<2.3",
-                "openmage/magento-lts": "<19.4.6|>=20,<20.0.2",
+                "openmage/magento-lts": "<19.4.8|>=20,<20.0.4",
+                "orchid/platform": ">=9,<9.4.4",
                 "oro/crm": ">=1.7,<1.7.4",
                 "oro/platform": ">=1.7,<1.7.4",
                 "padraic/humbug_get_contents": "<1.1.2",
@@ -907,8 +1248,8 @@
                 "scheb/two-factor-bundle": ">=0,<3.26|>=4,<4.11",
                 "sensiolabs/connect": "<4.2.3",
                 "serluck/phpwhois": "<=4.2.6",
-                "shopware/core": "<=6.3.1",
-                "shopware/platform": "<=6.3.1",
+                "shopware/core": "<=6.3.2",
+                "shopware/platform": "<=6.3.2",
                 "shopware/shopware": "<5.3.7",
                 "silverstripe/admin": ">=1.0.3,<1.0.4|>=1.1,<1.1.1",
                 "silverstripe/assets": ">=1,<1.4.7|>=1.5,<1.5.2",
@@ -941,7 +1282,7 @@
                 "sylius/grid": ">=1,<1.1.19|>=1.2,<1.2.18|>=1.3,<1.3.13|>=1.4,<1.4.5|>=1.5,<1.5.1",
                 "sylius/grid-bundle": ">=1,<1.1.19|>=1.2,<1.2.18|>=1.3,<1.3.13|>=1.4,<1.4.5|>=1.5,<1.5.1",
                 "sylius/resource-bundle": "<1.3.14|>=1.4,<1.4.7|>=1.5,<1.5.2|>=1.6,<1.6.4",
-                "sylius/sylius": "<1.3.16|>=1.4,<1.4.12|>=1.5,<1.5.9|>=1.6,<1.6.5",
+                "sylius/sylius": "<1.6.9|>=1.7,<1.7.9|>=1.8,<1.8.3",
                 "symbiote/silverstripe-multivaluefield": ">=3,<3.0.99",
                 "symbiote/silverstripe-versionedfiles": "<=2.0.3",
                 "symfony/cache": ">=3.1,<3.4.35|>=4,<4.2.12|>=4.3,<4.3.8",
@@ -1054,7 +1395,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-10-19T07:02:45+00:00"
+            "time": "2020-11-01T20:01:47+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",

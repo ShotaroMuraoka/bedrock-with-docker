@@ -28,6 +28,36 @@
       "type": "composer",
       "url": "https://wpackagist.org",
       "only": ["wpackagist-plugin/*", "wpackagist-theme/*"]
+    },
+    {
+      "type": "composer",
+      "url": "https://wp-languages.github.io"
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "koodimonni-plugin-language/google-site-kit-ja",
+        "type": "wordpress-language",
+        "version": "1.19.0",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/translation/plugin/google-site-kit/1.19.0/ja.zip",
+          "reference": "master"
+        }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "koodimonni-plugin-language/google-sitemap-generator-ja",
+        "type": "wordpress-language",
+        "version": "4.1.1",
+        "dist": {
+          "type": "zip",
+          "url": "https://downloads.wordpress.org/translation/plugin/google-sitemap-generator/4.1.1/ja.zip",
+          "reference": "master"
+        }
+      }
     }
   ],
   "require": {
@@ -41,7 +71,13 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/app-log": "1.1",
     "wpackagist-plugin/google-site-kit": "^1.19",
-    "wpackagist-plugin/google-sitemap-generator": "^4.1"
+    "wpackagist-plugin/google-sitemap-generator": "^4.1",
+    "wpackagist-plugin/wp-multibyte-patch":"2.9",
+    "wpackagist-plugin/random-post-name":"1.0",
+    "koodimonni-language/ja": "*",
+    "koodimonni/composer-dropin-installer": "*",
+    "koodimonni-plugin-language/google-site-kit-ja": ">=1.19.0",
+    "koodimonni-plugin-language/google-sitemap-generator-ja": ">=4.1.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.6",
@@ -58,6 +94,11 @@
       "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
       "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
       "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "dropin-paths": {
+      "web/app/languages/": ["vendor:koodimonni-language"],
+      "web/app/languages/plugins": ["vendor:koodimonni-plugin-language"],
+      "web/app/languages/themes": ["vendor:koodimonni-theme-language"]
     },
     "wordpress-install-dir": "web/wp"
   },
