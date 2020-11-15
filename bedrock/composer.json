@@ -88,6 +88,7 @@
     "wpackagist-plugin/wp-multibyte-patch":"2.9",
     "wpackagist-plugin/random-post-name":"1.0",
     "wpackagist-plugin/highlighting-code-block":"1.2.6",
+    "wpackagist-plugin/siteguard":"1.5.2",
     "koodimonni-language/ja": "*",
     "koodimonni/composer-dropin-installer": "*",
     "koodimonni-plugin-language/google-site-kit-ja": ">=1.19.0",
