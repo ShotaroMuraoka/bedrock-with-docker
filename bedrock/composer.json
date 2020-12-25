@@ -79,7 +79,7 @@
     "vlucas/phpdotenv": "^4.1.8",
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
-    "roots/wordpress": "5.5.3",
+    "roots/wordpress": "5.6",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/app-log": "1.1",
@@ -90,6 +90,10 @@
     "wpackagist-plugin/highlighting-code-block":"1.2.6",
     "wpackagist-plugin/siteguard":"1.5.2",
     "koodimonni-language/ja": "*",
+
+
+
+
     "koodimonni/composer-dropin-installer": "*",
     "koodimonni-plugin-language/google-site-kit-ja": ">=1.19.0",
     "koodimonni-plugin-language/google-sitemap-generator-ja": ">=4.1.1",
