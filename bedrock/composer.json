@@ -90,10 +90,6 @@
     "wpackagist-plugin/highlighting-code-block":"1.2.6",
     "wpackagist-plugin/siteguard":"1.5.2",
     "koodimonni-language/ja": "*",
-
-
-
-
     "koodimonni/composer-dropin-installer": "*",
     "koodimonni-plugin-language/google-site-kit-ja": ">=1.19.0",
     "koodimonni-plugin-language/google-sitemap-generator-ja": ">=4.1.1",
