@@ -79,15 +79,11 @@ function get_post_navi_thumbnail_tag($id, $width = THUMB120WIDTH, $height = THUM
       $w = THUMB120WIDTH;
       $h = THUMB120HEIGHT;
       $image = get_no_image_160x90_url();
-      // $wh_attr = ' srcset="'.$image.' '.$w.'w" width="'.$w.'" height="'.$h.'" sizes="(max-width: '.$w.'px) '.$w.'vw, '.$h.'px"';
     } else {//表示タイプ＝スクエア
       $image = get_no_image_150x150_url();
       $w = THUMB150WIDTH;
       $h = THUMB150HEIGHT;
-      // $wh_attr = ' srcset="'.$image.' '.W120.'w" width="'.W120.'" height="'.W120.'" sizes="(max-width: '.W120.'px) '.W120.'vw, '.W120.'px"';
     }
-    //後で消す
-    // $thumb = '<img src="'.$image.'" alt="" class="no-image post-navi-no-image"'.$wh_attr.' />';
     $thumb = get_original_image_tag($image, $w, $h, 'no-image post-navi-no-image');
   }
   return $thumb;
@@ -210,7 +206,7 @@ function custom_main_query_pre_get_posts( $query ) {
   if ($query->is_main_query()) {
 
     //順番変更
-  if (!is_index_sort_orderby_date()) {
+  if (!is_index_sort_orderby_date() && !is_search()) {
     //投稿日順じゃないときは設定値を挿入する
     $query->set( 'orderby', get_index_sort_orderby() );
   }
@@ -279,7 +275,6 @@ add_filter('wp_sitemaps_posts_query_args', 'wp_sitemaps_posts_query_args_noindex
 if ( !function_exists( 'wp_sitemaps_posts_query_args_noindex_custom' ) ):
 function wp_sitemaps_posts_query_args_noindex_custom($args){
   $args['post__not_in'] = get_noindex_post_ids();
-  //_v($args);
   return $args;
 }
 endif;
@@ -305,6 +300,7 @@ endif;
 
 //サイトマップにカテゴリー・タグのnoindex設定を反映させる
 add_filter('wp_sitemaps_taxonomies', 'wp_sitemaps_taxonomies_custum');
+if ( !function_exists( 'wp_sitemaps_taxonomies_custum' ) ):
 function wp_sitemaps_taxonomies_custum( $taxonomies ) {
   //サイトマップにカテゴリーを出力しない
   if (is_category_page_noindex()) {
@@ -318,9 +314,11 @@ function wp_sitemaps_taxonomies_custum( $taxonomies ) {
 
   return $taxonomies;
 }
+endif;
 
 //サイトマップにその他のアーカイブのnoindex設定を反映する
 add_filter('wp_sitemaps_add_provider', 'wp_sitemaps_add_provider_custom',  10, 2);
+if ( !function_exists( 'wp_sitemaps_add_provider_custom' ) ):
 function wp_sitemaps_add_provider_custom( $provider, $name ) {
     if ( is_other_archive_page_noindex() && 'users' === $name ) {
         return false;
@@ -328,3 +326,4 @@ function wp_sitemaps_add_provider_custom( $provider, $name ) {
 
     return $provider;
 }
+endif;

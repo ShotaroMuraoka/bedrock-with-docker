@@ -6,7 +6,7 @@
   Author URI: https://milmemo.net/
   Screenshot URI: https://milmemo.net/wp-content/uploads/cocoon-skin-mil_light-main-image-1999x1051.png
   Version: 1.0.1
-  Priority: 13
+  Priority: 9700001000
 */
 
 body {
@@ -459,7 +459,7 @@ span.post-date {
 #navi {
     background-color: #faf5ef;
     background-color: transparent;
-    margin: 1em auto 1.7em;
+    margin: 1em auto;
 }
 .hlt-top-menu #navi {
     background-color: transparent;
@@ -842,7 +842,7 @@ span.post-date {
 }
 .btn-l, .ranking-item-link-buttons a, .btn-wrap.btn-wrap-l > a {
     padding: 15px 20px;
-    margin: 1.7em;
+    margin: 0 1.7em 1.7em;
 }
 .btn:hover::after, .ranking-item-link-buttons a:hover::after, .btn-wrap > a:hover::after {
     right: 0px;
@@ -981,7 +981,7 @@ div.speech-balloon {
 
 @media screen and (max-width: 834px) {
     main.main, div.sidebar {
-        padding: 0 10px 16px;
+        padding: 0 24px 16px;
         margin: 0 0 10px;
     }
     .breadcrumb {

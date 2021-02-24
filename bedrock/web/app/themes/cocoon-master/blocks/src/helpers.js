@@ -6,6 +6,36 @@
  */
 
 import classnames from 'classnames';
+// import domReady from '@wordpress/dom-ready';
+
+// domReady( function() {
+//   const addClasses = function () {
+//     console.log(jQuery('.block-editor-writing-flow'));
+//   };
+//   // setTimeout(addClasses, 100);
+//   // let classList = document.getElementsByClassName("block-editor__typewriter");
+//   // console.log(classList.length);
+//   // const addClasses = function () {
+//     // console.log('2');
+//     // console.log(jQuery('.block-editor-writing-flow'));
+//     // add body class
+
+//     //do something after DOM loads.
+//     // console.log('domReady');
+//     // // document.getElementById("wpbody").classList.add("test");
+//     // let classList = document.getElementsByClassName('block-editor__typewriter');
+//     // console.log(document.getElementById("wpwrap"));
+//     // console.log([ ... classList]);
+//     // for (var i = 0; i < classList[0].length; i++) {
+//     //   console.log(classList[0][i]); //second console output
+//     //   classList[0][i].add('ex2-1', 'ex2-2');
+//     // }
+//     // console.log(classList.length);
+//     // [ ... classList].forEach(e =>
+//     //   console.log(e);
+//     // )
+//     // classList.add('ex2-1', 'ex2-2');
+// } );
 
 const { __ } = wp.i18n;
 const {
@@ -34,6 +64,8 @@ export const BUTTON_BLOCK = 'button-block';
 export const LAYOUT_BLOCK_CLASS = 'layout-box';
 export const PARAGRAPH_CLASS = ' paragraph';
 export const CLICK_POINT_MSG = __( 'こちらをクリックして設定変更。この入力は公開ページで反映されません。', THEME_NAME );
+
+export const keyColor = gbColors['keyColor'];
 
 //日時をもとにしたID作成
 export function getDateID(){
@@ -872,6 +904,10 @@ export const LIST_ICONS = [
   {
     value: 'list-window-close-o',
     label: __( 'fab-window-close-o', THEME_NAME ),
+  },
+  {
+    value: 'list-paw',
+    label: __( 'fab-paw', THEME_NAME ),
   },
 ];
 

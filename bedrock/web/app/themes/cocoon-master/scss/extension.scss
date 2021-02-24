@@ -242,24 +242,62 @@ $marker_u_blue: $marker_blue;
   border-radius: 4px;
   position: relative;
   display: block;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  // margin-bottom: 1.2em;
   //overflow: hidden;
 }
 
-.block-box{
-  p:first-of-type{
-    margin-top: 0;
+.article {
+  blockquote,
+  .wp-block-media-text__content,
+  .wp-block-columns,
+  .column-left,
+  .column-center,
+  .column-right,
+  .column-wrap,
+  .timeline-box,
+  .wp-block-cover,
+  .blogcard-type,
+  .btn-wrap,
+  .wp-block-group,
+  .wp-block-gallery,
+  .block-box,
+  .blank-box,
+  .common-icon-box,
+  .info-box,
+  .primary-box,
+  .success-box,
+  .warning-box,
+  .danger-box,
+  .secondary-box,
+  .light-box,
+  .dark-box,
+  .toc{
+    :last-child{
+      margin-bottom: 0;
+    }
+
+    // ol,
+    // ul{
+    //   margin: 0;
+    // }
   }
-  p:last-of-type{
+
+  .entry-content > div > :last-child{
     margin-bottom: 0;
   }
 
-  ol,
-  ul{
-    margin: 0;
+  div.scrollable-table,
+  .wp-block-table{
+    table{
+      margin-bottom: 0;
+    }
+  }
+
+  .wp-block-table .scrollable-table{
+    margin-bottom: 0;
   }
 }
+
 
 .is-style-information-box,
 .information-box,
@@ -507,7 +545,9 @@ $bb_green: $green_color;
 .blank-box{
   border: 3px solid $grey_color;
   padding: 1.2em 1em;
-  margin: 1em 2%;
+  margin-left: 2%;
+  margin-right: 2%;
+  // margin-bottom: 1.2em;
   border-radius: $basic_border_radius;
     ol, ul {
     margin: 0;
@@ -838,13 +878,13 @@ div.search-form{
 
 .btn-wrap{
   min-height: 2em;
-  margin: 1.6em 0;
   img[width="1"]{
     position: absolute;
     bottom: 0;
     right: 0;
   }
 }
+
 
 .btn,
 .btn-wrap > a,
@@ -887,8 +927,7 @@ div.search-form{
 .btn-wrap.btn-wrap-l > a{
   padding: 14px 20px;
   font-size: 18px;
-  //display: block;
-  margin: 1em;
+  // margin-bottom: 1.2em;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1002,13 +1041,14 @@ div.search-form{
 
 .micro-top{
   font-size: 0.8em;
-  margin-bottom: -1.2em;
-  margin-top: 1em;
+  margin-bottom: 0.2em;
+  // margin-bottom: -1.2em;
+  // margin-top: 1.2em;
 }
 .micro-bottom{
   font-size: 0.8em;
   margin-top: -1.2em;
-  margin-bottom: 1em;
+  // margin-bottom: 1.2em;
 }
 .micro-center{
   text-align: center;
@@ -1025,7 +1065,7 @@ div.search-form{
   border-radius: 4px;
   padding: 3px 12px;
   display: table;
-  //margin-bottom: -.7em;
+  margin-bottom: 0.8em;
   font-size: 0.8em;
   &.has-background{
     color: #fff;
@@ -1125,27 +1165,30 @@ div.search-form{
   }
 }
 
-.mc-red{@include micro_copycolor($red_color);}
-.mc-pink{@include micro_copycolor($pink_color);}
-.mc-purple{@include micro_copycolor($purple_color);}
-.mc-blue{@include micro_copycolor($blue_color);}
-.mc-green{@include micro_copycolor($green_color);}
-.mc-orange{@include micro_copycolor($orange_color);}
-.mc-yellow{@include micro_copycolor($yellow_color);}
-.mc-brown{@include micro_copycolor($brown_color);}
-.mc-grey{@include micro_copycolor($grey_color);}
-.mc-black{@include micro_copycolor($black_color);}
+.micro-balloon{
+  &.mc-red{@include micro_copycolor($red_color);}
+  &.mc-pink{@include micro_copycolor($pink_color);}
+  &.mc-purple{@include micro_copycolor($purple_color);}
+  &.mc-blue{@include micro_copycolor($blue_color);}
+  &.mc-green{@include micro_copycolor($green_color);}
+  &.mc-orange{@include micro_copycolor($orange_color);}
+  &.mc-yellow{@include micro_copycolor($yellow_color);}
+  &.mc-brown{@include micro_copycolor($brown_color);}
+  &.mc-grey{@include micro_copycolor($grey_color);}
+  &.mc-black{@include micro_copycolor($black_color);}
 
-.mc-deep{@include micro_copycolor($deep_color);}
-.mc-indigo{@include micro_copycolor($indigo_color);}
-.mc-light-blue{@include micro_copycolor($light_blue_color);}
-.mc-cyan{@include micro_copycolor($cyan_color);}
-.mc-teal{@include micro_copycolor($teal_color);}
-.mc-light-green{@include micro_copycolor($light_green_color);}
-.mc-lime{@include micro_copycolor($lime_color);}
-.mc-amber{@include micro_copycolor($amber_color);}
-.mc-deep-orange{@include micro_copycolor($deep_orange_color);}
-.mc-white{@include micro_copycolor($white_color);}
+  &.mc-deep{@include micro_copycolor($deep_color);}
+  &.mc-indigo{@include micro_copycolor($indigo_color);}
+  &.mc-light-blue{@include micro_copycolor($light_blue_color);}
+  &.mc-cyan{@include micro_copycolor($cyan_color);}
+  &.mc-teal{@include micro_copycolor($teal_color);}
+  &.mc-light-green{@include micro_copycolor($light_green_color);}
+  &.mc-lime{@include micro_copycolor($lime_color);}
+  &.mc-amber{@include micro_copycolor($amber_color);}
+  &.mc-deep-orange{@include micro_copycolor($deep_orange_color);}
+  &.mc-white{@include micro_copycolor($white_color);}
+}
+
 
 .blogcard-label{
   position: absolute;
@@ -1235,7 +1278,7 @@ div.search-form{
 ///////////////////////////////////////////
 .button-block{
   float: none;
-  margin: 1em 0;
+  // margin-bottom: 1.2em;
   &.alignleft{
     text-align: left;
   }
@@ -1261,7 +1304,7 @@ div.search-form{
 ** キャプションボックス
 ************************************/
 .caption-box{
-  margin: 1.2em 0;
+  // margin-bottom: 1.2em;
   border: 2px solid $current_bgc;
   border-radius: $basic_border_radius;
   &.has-border-color .box-label{
@@ -1313,7 +1356,7 @@ div.search-form{
 ** キャプションタブボックス
 ************************************/
 .tab-caption-box{
-  margin: 1.2em 0;
+  // margin-bottom: 1.2em;
   &.block-box.has-background{
     background-color: transparent;
   }
@@ -1372,7 +1415,7 @@ div.search-form{
 ** ラベルボックス
 ************************************/
 .label-box{
-  margin: 1.2em 0;
+  // margin-bottom: 1.2em;
   &.block-box.has-background{
     background-color: transparent;
   }
@@ -1445,7 +1488,7 @@ div.search-form{
 ** トグル表示ボタン
 ************************************/
 .toggle-wrap {
-  margin: 1.2em 0;
+  // margin-bottom: 1.2em;
   position: relative;
   >p{
     margin: 0;
@@ -1641,12 +1684,38 @@ $toggle_border_width: 2px;
 //     display: none;
 //   }
 // }
+// .wp-block-image{
+//   margin-bottom: 1.2em;
+// }
 
-.body .wp-block-image{
-  figcaption{
-    margin: 0;
-    font-size: 0.7em;
-    opacity: 0.8;
-    padding: 0 6px;
+
+figcaption{
+  margin: 0;
+  font-size: 0.7em;
+  opacity: 0.8;
+  padding: 0 6px;
+}
+
+.wp-block-separator.is-style-wide{
+  border-bottom: solid 3px !important;
+}
+
+
+
+@media screen and (min-width:600px) and (max-width:781px){
+  .article .wp-block-columns :nth-child(odd):nth-last-child(2){
+    margin-bottom: 0;
   }
 }
+
+@media screen and (min-width:600px){
+  .column-wrap > *{
+    margin-bottom: 0 !important;
+  }
+}
+
+.body .wp-block-gallery .blocks-gallery-item {
+  margin-bottom: 1em;
+}
+
+

@@ -108,20 +108,28 @@ function visual_editor_stylesheets_custom($stylesheets) {
     $file = get_visual_color_palette_css_cache_file();
     $color_file_url = get_visual_color_palette_css_cache_url();
     wp_filesystem_put_contents($file, $css);
-
     array_push($stylesheets,
-      add_file_ver_to_css_js(get_site_icon_font_url()),
+      // add_file_ver_to_css_js(get_site_icon_font_url()),
       add_file_ver_to_css_js($style_url),
       add_file_ver_to_css_js($keyframes_url),
       add_file_ver_to_css_js($editor_style_url),
       add_file_ver_to_css_js($color_file_url)
     );
+
+    //ブロックエディターを利用しているとき
+    if (!use_gutenberg_editor()) {
+      array_push($stylesheets,
+        add_file_ver_to_css_js(get_site_icon_font_url())
+      );
+    }
+
     //Font Awesome5が有効な場合
     if (is_site_icon_font_font_awesome_5()) {
       array_push($stylesheets,
         add_file_ver_to_css_js(FONT_AWESOME_5_UPDATE_URL)
       );
     }
+
     //スキンが設定されている場合
     if (get_skin_url() &&
         //エディター除外スキンの場合
@@ -226,7 +234,7 @@ function gutenberg_editor_settings( $editor_settings, $post ) {
         if ( file_exists( $path ) ) {
           $styles[] = array(
             'css'     => wp_filesystem_get_contents( $path ),
-            'baseURL' => $item,
+            // 'baseURL' => $item,
           );
         }
       }

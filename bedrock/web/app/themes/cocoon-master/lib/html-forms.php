@@ -140,17 +140,21 @@ endif;
 if ( !function_exists( 'generate_radiobox_tag' ) ):
 function generate_radiobox_tag($name, $options, $now_value, $label = null){
   ob_start();
+  $i = 0;
   if ($label) {
     generate_label_tag($name, $label);
     generate_br_tag();
   }?>
   <ul>
     <?php foreach ($options as $value => $caption) {
+    $id = $name.'_'.$i;
     // _v($value.' == '.$now_value);
     // _v($value == $now_value);
     ?>
-    <li><input type="radio" name="<?php echo $name; ?>" value="<?php echo $value; ?>"<?php the_checkbox_checked($value, $now_value) ?>><?php echo $caption; ?></li>
-    <?php } ?>
+    <li><input type="radio" name="<?php echo $name; ?>" id="<?php echo $id; ?>" value="<?php echo $value; ?>"<?php the_checkbox_checked($value, $now_value) ?>><label for="<?php echo $id; ?>"><?php echo $caption; ?></label></li>
+    <?php
+    $i++;
+    } ?>
   </ul>
   <?php
   $res = ob_get_clean();
@@ -713,7 +717,8 @@ function hierarchical_category_check_list( $cat, $name, $checks ) {
       if (in_array($cat->term_id, $checks)) {
         $checked = ' checked="checked"';
       }
-      echo '<ul><li><input type="checkbox" name="'.$name.'[]" value="'.$cat->term_id.'"'.$checked.'>' . $cat->name . '';
+      $id = $name.'_'.$cat->term_id;
+      echo '<ul><li><input type="checkbox" name="'.$name.'[]" id="'.$id.'" value="'.$cat->term_id.'"'.$checked.'><label for="'.$id.'">' . $cat->name . '</label>';
       hierarchical_category_check_list( $cat->term_id, $name, $checks );
     endforeach;
   endif;
@@ -762,68 +767,82 @@ function generate_page_display_check_list( $name, $checks, $width = 0 ) {
 
   echo '<div class="tab-content page-display-check-list '.$name.'-list" style="width: '.$width.';"><ul>';
 
-  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_front_page" ';
+  $id = $name.'_'.'is_front_page';
+  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_front_page" id="'.$id.'" ';
   checked(in_array('is_front_page', $checks));
-  echo '>' . __( 'トップページのみ', THEME_NAME ) . '</li>';
+  echo '><label for="'.$id.'">' . __( 'トップページのみ', THEME_NAME ) . '</label></li>';
 
-  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_single" ';
+  $id = $name.'_'.'is_single';
+  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_single" id="'.$id.'" ';
   checked(in_array('is_single', $checks));
-  echo '>' . __( '投稿', THEME_NAME ) . '</li>';
+  echo '><label for="'.$id.'">' . __( '投稿', THEME_NAME ) . '</label></li>';
 
-  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_page" ';
+  $id = $name.'_'.'is_page';
+  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_page" id="'.$id.'" ';
   checked(in_array('is_page', $checks));
-  echo '>' . __( '固定ページ', THEME_NAME ) . '</li>';
+  echo '><label for="'.$id.'">' . __( '固定ページ', THEME_NAME ) . '</label></li>';
 
-  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_category" ';
+  $id = $name.'_'.'is_category';
+  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_category" id="'.$id.'" ';
   checked(in_array('is_category', $checks));
-  echo '>' . __( 'カテゴリ一覧', THEME_NAME ) . '</li>';
+  echo '><label for="'.$id.'">' . __( 'カテゴリ一覧', THEME_NAME ) . '</label></li>';
 
-  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_tag" ';
+  $id = $name.'_'.'is_tag';
+  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_tag" id="'.$id.'" ';
   checked(in_array('is_tag', $checks));
-  echo '>' . __( 'タグ一覧', THEME_NAME ) . '</li>';
+  echo '><label for="'.$id.'">' . __( 'タグ一覧', THEME_NAME ) . '</label></li>';
 
-  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_author" ';
+  $id = $name.'_'.'is_author';
+  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_author" id="'.$id.'" ';
   checked(in_array('is_author', $checks));
-  echo '>' . __( '著者一覧', THEME_NAME ) . '</li>';
+  echo '><label for="'.$id.'">' . __( '著者一覧', THEME_NAME ) . '</label></li>';
 
-  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_archive" ';
+  $id = $name.'_'.'is_archive';
+  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_archive" id="'.$id.'" ';
   checked(in_array('is_archive', $checks));
-  echo '>' . __( 'アーカイブ一覧', THEME_NAME ) . '</li>';
+  echo '><label for="'.$id.'">' . __( 'アーカイブ一覧', THEME_NAME ) . '</label></li>';
 
-  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_search" ';
+  $id = $name.'_'.'is_search';
+  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_search" id="'.$id.'" ';
   checked(in_array('is_search', $checks));
-  echo '>' . __( '検索結果一覧', THEME_NAME ) . '</li>';
+  echo '><label for="'.$id.'">' . __( '検索結果一覧', THEME_NAME ) . '</label></li>';
 
-  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_404" ';
+  $id = $name.'_'.'is_404';
+  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_404" id="'.$id.'" ';
   checked(in_array('is_404', $checks));
-  echo '>' . __( '404ページ一覧', THEME_NAME ) . '</li>';
+  echo '><label for="'.$id.'">' . __( '404ページ一覧', THEME_NAME ) . '</label></li>';
 
-  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_amp" ';
+  $id = $name.'_'.'is_amp';
+  echo '<li><input type="checkbox" name="'.$name.'[]" value="is_amp" id="'.$id.'" ';
   checked(in_array('is_amp', $checks));
-  echo '>' . __( 'AMPページ', THEME_NAME ) . '</li>';
+  echo '><label for="'.$id.'">' . __( 'AMPページ', THEME_NAME ) . '</label></li>';
 
   if (is_wpforo_exist()) {
-    echo '<li><input type="checkbox" name="'.$name.'[]" value="is_wpforo_plugin_page" ';
+    $id = $name.'_'.'is_wpforo_plugin_page';
+    echo '<li><input type="checkbox" name="'.$name.'[]" value="is_wpforo_plugin_page" id="'.$id.'" ';
     checked(in_array('is_wpforo_plugin_page', $checks));
-    echo '>' . __( 'wpForoページ', THEME_NAME ) . '</li>';
+    echo '><label for="'.$id.'">' . __( 'wpForoページ', THEME_NAME ) . '</label></li>';
   }
 
   if (is_bbpress_exist()) {
-    echo '<li><input type="checkbox" name="'.$name.'[]" value="is_bbpress_page" ';
+    $id = $name.'_'.'is_bbpress_page';
+    echo '<li><input type="checkbox" name="'.$name.'[]" value="is_bbpress_page" id="'.$id.'" ';
     checked(in_array('is_bbpress_page', $checks));
-    echo '>' . __( 'bbPressページ', THEME_NAME ) . '</li>';
+    echo '><label for="'.$id.'">' . __( 'bbPressページ', THEME_NAME ) . '</label></li>';
   }
 
   if (is_buddypress_exist()) {
-    echo '<li><input type="checkbox" name="'.$name.'[]" value="is_buddypress_page" ';
+    $id = $name.'_'.'is_buddypress_page';
+    echo '<li><input type="checkbox" name="'.$name.'[]" value="is_buddypress_page" id="'.$id.'" ';
     checked(in_array('is_buddypress_page', $checks));
-    echo '>' . __( 'BuddyPressページ', THEME_NAME ) . '</li>';
+    echo '><label for="'.$id.'">' . __( 'BuddyPressページ', THEME_NAME ) . '</label></li>';
   }
 
   if (is_plugin_fourm_exist()) {
-    echo '<li><input type="checkbox" name="'.$name.'[]" value="is_plugin_fourm_page" ';
+    $id = $name.'_'.'is_plugin_fourm_page';
+    echo '<li><input type="checkbox" name="'.$name.'[]" value="is_plugin_fourm_page" id="'.$id.'" ';
     checked(in_array('is_plugin_fourm_page', $checks));
-    echo '>' . __( 'プラグインフォーラムページ（bbPress、BuddyPress、wpForo）', THEME_NAME ) . '</li>';
+    echo '><label for="'.$id.'">' . __( 'プラグインフォーラムページ（bbPress、BuddyPress、wpForo）', THEME_NAME ) . '</label></li>';
   }
 
   echo '</ul></div>';
@@ -848,9 +867,10 @@ function generate_author_check_list( $name, $checks, $width = 0 ) {
   $users = get_users( array('orderby'=>'ID','order'=>'ASC') );
   foreach($users as $user) {
     $uid = $user->ID;
-    echo '<li><input type="checkbox" name="'.$name.'[]" value="'.$uid.'" ';
+    $id = $name.'_'.$uid;
+    echo '<li><input type="checkbox" name="'.$name.'[]" value="'.$uid.'" id="'.$id.'"';
     checked(in_array($uid, $checks));
-    echo '>' . $user->display_name . '</li>';
+    echo '><label for="'.$id.'">' . $user->display_name . '</label></li>';
   } //foreach
 
   echo '</ul></div>';
@@ -942,9 +962,10 @@ function generate_popular_entries_tag($atts){
     'bold' => 0,
     'arrow' => 0,
     'class' => null,
+    'author' => null,
   ), $atts));
 
-  $records = get_access_ranking_records($days, $entry_count, $entry_type, $cat_ids, $exclude_post_ids, $exclude_cat_ids, $children);
+  $records = get_access_ranking_records($days, $entry_count, $entry_type, $cat_ids, $exclude_post_ids, $exclude_cat_ids, $children, $author);
 
   $thumb_size = get_popular_entries_thumbnail_size($entry_type);
   $atts = array(
@@ -963,7 +984,7 @@ function generate_popular_entries_tag($atts){
     foreach ($records as $post):
       $permalink = get_permalink( $post->ID );
       $title = $post->post_title;
-      $no_thumbnail_url = ($entry_type == ET_DEFAULT) ? get_no_image_120x68_url() : get_no_image_320x180_url();
+      $no_thumbnail_url = ($entry_type == ET_DEFAULT) ? get_no_image_120x68_url($post->ID) : get_no_image_320x180_url($post->ID);
       $w   = ($entry_type == ET_DEFAULT) ? THUMB120WIDTH  : THUMB320WIDTH;
       $h   = ($entry_type == ET_DEFAULT) ? THUMB120HEIGHT : THUMB320HEIGHT;
 
@@ -973,8 +994,6 @@ function generate_popular_entries_tag($atts){
       if ($post_thumbnail) {
         $post_thumbnail_img = $post_thumbnail;
       } else {
-        //後で消す
-        //$post_thumbnail_img = '<img src="'.esc_url($no_thumbnail_url).'" alt="" class="no-image popular-entry-card-thumb-no-image widget-entry-card-thumb-no-image" width="'.$w.'" height="'.$h.'" />';
         $post_thumbnail_img = get_original_image_tag($no_thumbnail_url, $w, $h, 'no-image popular-entry-card-thumb-no-image widget-entry-card-thumb-no-image', '');
       }
 
@@ -1089,9 +1108,13 @@ function generate_widget_entries_tag($atts){
   //除外投稿
   $exclude_post_ids = get_archive_exclude_post_ids();
   if ($exclude_post_ids && is_array($exclude_post_ids)) {
-    $args += array(
-      'post__not_in' => $exclude_post_ids,
-    );
+    if (isset($args['post__not_in']) && is_array($args['post__not_in'])) {
+      foreach ($exclude_post_ids as $exclude_post_id) {
+        array_push($args['post__not_in'], $exclude_post_id);
+      }
+    } else {
+      $args['post__not_in'] = $exclude_post_ids;
+    }
   }
   if ($post_type) {
     $args += array(
@@ -1115,7 +1138,7 @@ function generate_widget_entries_tag($atts){
     }
   }
   //関連記事の場合は表示ページを除外
-  if ($random) {
+  if (is_single() && $random) {
     $post_id = get_the_ID();
     if (isset($args['post__not_in'])) {
       $args['post__not_in'][] = $post_id;
@@ -1154,13 +1177,13 @@ function generate_widget_entries_tag($atts){
         'operator' => 'IN'
       );
     }
-    //_v($tax_querys);
     $args += array(
       'tax_query' => array(
         $tax_querys,
         'relation' => 'AND'
       )
     );
+    //_v($tax_querys);
   }
   // _v($args);
   $thumb_size = get_widget_entries_thumbnail_size($type);
@@ -1240,8 +1263,6 @@ endif;
 //ナビカードサムネイルの取得
 if ( !function_exists( 'get_navi_entry_card_thumbnail_tag' ) ):
 function get_navi_entry_card_thumbnail_tag($image_attributes, $title, $class){
-  //後で消す
-  // return '<img src="'.esc_attr($image_attributes[0]).'" alt="'.esc_attr($title).'" width="'.esc_attr($image_attributes[1]).'" height="'.esc_attr($image_attributes[2]).'">';
   return get_original_image_tag($image_attributes[0], $image_attributes[1], $image_attributes[2], $class, $title);
 }
 endif;
@@ -1260,8 +1281,6 @@ function get_widget_entry_card_no_image_tag($type, $prefix){
   $url = (!$is_large_image_use) ? get_no_image_120x68_url() : get_no_image_320x180_url();
   $w   = (!$is_large_image_use) ? THUMB120WIDTH  : THUMB320WIDTH;
   $h   = (!$is_large_image_use) ? THUMB120HEIGHT : THUMB320HEIGHT;
-  //後で消す
-  // $tag = '<img src="'.esc_url($url).'" alt="" class="no-image '.$prefix.'-entry-card-thumb-no-image widget-entry-card-thumb-no-image" width="'.$w.'" height="'.$h.'" />';
 
   $tag = get_original_image_tag($url, $w, $h, 'no-image '.$prefix.'-entry-card-thumb-no-image widget-entry-card-thumb-no-image', '');
   return $tag;
@@ -1537,16 +1556,21 @@ function get_navi_card_image_attributes($menu, $type = ET_DEFAULT){
   $object = $menu->object;
 
   $is_large_image_use = is_widget_entry_card_large_image_use($type);
+  $thumb_size = $is_large_image_use ? THUMB320 : THUMB120;
   //大きなサムネイル画像を使用する場合
   $image_attributes = array();
   $post_types = get_custum_post_types();
   if ($object == 'post' || $object == 'page' || in_array($object, $post_types)) {
-    $thumb_size = $is_large_image_use ? THUMB320 : THUMB120;
     $thumbnail_id = get_post_thumbnail_id($object_id);
     $image_attributes = wp_get_attachment_image_src($thumbnail_id, $thumb_size);
   }
   elseif ($object == 'category'){//カテゴリーアイキャッチの取得
     $image_url = get_the_category_eye_catch_url($object_id);
+    $thumb_id = attachment_url_to_postid( $image_url );
+    $thumb_img = wp_get_attachment_image_src($thumb_id, $thumb_size);
+    if ($thumb_img[0]) {
+      $image_url = $thumb_img[0];
+    }
     $image_attributes = get_navi_card_image_url_attributes($image_url, $type);
   }
   elseif ($object == 'post_tag' || $object == 'custom') {//カスタムメニュー
@@ -1597,6 +1621,7 @@ function get_navi_card_ribbon_tag($ribbon_no){
   }
   $tag = '';
   if ($caption){
+    $caption = apply_filters('get_navi_card_ribbon_caption', $caption, $ribbon_no);
     $tag = '<div class="ribbon ribbon-top-left ribbon-color-'.$ribbon_no.'"><span>'.$caption.'</span></div>';
   }
   return $tag;

@@ -132,9 +132,6 @@
     $('#respond').slideDown();
   });
 
-    //カルーセルの表示
-    $('.carousel').fadeIn(1000);
-
   //Google検索ボタン
   $('.sbtn').click(function(){
 		var w = $(this).prev('.sform').text();
@@ -176,6 +173,10 @@
     if ($(this).has('.logo-menu-button').length) {
       $(this).addClass('has-logo-button');
     }
+  });
+
+  $(window).load(function(){
+    $('#carousel').addClass('loaded');
   });
 
 /*
