@@ -627,6 +627,7 @@ https://codepen.io/nxworld/pen/oLdoWb
 .admin-settings .demo .entry-content { margin-top: 1em; margin-bottom: 3em; }
 .admin-settings .demo pre, .admin-settings .demo pre * { line-height: 1.6; word-wrap: normal; }
 .admin-settings .demo .entry-categories-tags > div { margin-bottom: 0.5em; }
+.admin-settings .demo .entry-categories-tags .tax-icon { margin-right: 0.4em; }
 .admin-settings .demo .ctdt-one-row > div { display: inline-block; }
 .admin-settings .demo .ctdt-category-only .entry-tags { display: none; }
 .admin-settings .demo .ctdt-tag-only .entry-categories { display: none; }
@@ -678,7 +679,7 @@ https://codepen.io/nxworld/pen/oLdoWb
 .admin-settings .demo .read-time { text-align: center; font-size: 0.7em; border-top: 4px double #eee; border-bottom: 4px double #eee; margin: 0 3%; margin-bottom: 1em; }
 .admin-settings .demo .eye-catch-wrap { display: flex; }
 .admin-settings .demo .eye-catch { position: relative; margin-bottom: .6em; max-width: 100%; }
-.admin-settings .demo .eye-catch .cat-label { position: absolute; right: auto; top: 0.4em; bottom: auto; left: 0.4em; font-size: 14px; padding: 4px 8px; opacity: 0.9; border: 1px solid #eee; }
+.admin-settings .demo .eye-catch .cat-label { position: absolute; right: auto; top: 0.4em; bottom: auto; left: 0.4em; font-size: 14px; padding: 2px 8px; opacity: 0.9; border: 1px solid #eee; }
 .admin-settings .demo .eye-catch img { vertical-align: bottom; }
 .admin-settings .demo .eye-catch-caption { color: #fff; position: absolute; bottom: 0; padding: 2em 0.6em 0.2em; text-align: right; width: 100%; font-size: 0.9em; background: linear-gradient(180deg, transparent, #555); opacity: 0.9; }
 @media all and (-ms-high-contrast: none) { .admin-settings .demo { /* IE10～ */ }
@@ -856,7 +857,6 @@ https://codepen.io/nxworld/pen/oLdoWb
 .admin-settings .demo .is-style-dark-box, .admin-settings .demo .dark-box { color: #1b1e21; background-color: #d6d8d9; border-color: #c6c8ca; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
 .admin-settings .demo .is-style-information-box, .admin-settings .demo .is-style-question-box, .admin-settings .demo .is-style-alert-box, .admin-settings .demo .is-style-memo-box, .admin-settings .demo .is-style-comment-box, .admin-settings .demo .is-style-ok-box, .admin-settings .demo .is-style-ng-box, .admin-settings .demo .is-style-good-box, .admin-settings .demo .is-style-bad-box, .admin-settings .demo .is-style-profile-box, .admin-settings .demo .information-box, .admin-settings .demo .question-box, .admin-settings .demo .alert-box, .admin-settings .demo .information, .admin-settings .demo .question, .admin-settings .demo .alert, .admin-settings .demo .memo-box, .admin-settings .demo .comment-box, .admin-settings .demo .common-icon-box { padding: 20px 20px 20px 72px; border-radius: 4px; position: relative; display: block; }
 .admin-settings .demo .article blockquote :last-child, .admin-settings .demo .article .wp-block-media-text__content :last-child, .admin-settings .demo .article .wp-block-columns :last-child, .admin-settings .demo .article .column-left :last-child, .admin-settings .demo .article .column-center :last-child, .admin-settings .demo .article .column-right :last-child, .admin-settings .demo .article .column-wrap :last-child, .admin-settings .demo .article .timeline-box :last-child, .admin-settings .demo .article .wp-block-cover :last-child, .admin-settings .demo .article .blogcard-type :last-child, .admin-settings .demo .article .btn-wrap :last-child, .admin-settings .demo .article .wp-block-group :last-child, .admin-settings .demo .article .wp-block-gallery :last-child, .admin-settings .demo .article .block-box :last-child, .admin-settings .demo .article .blank-box :last-child, .admin-settings .demo .article .is-style-blank-box-red :last-child, .admin-settings .demo .article .is-style-blank-box-navy :last-child, .admin-settings .demo .article .is-style-blank-box-blue :last-child, .admin-settings .demo .article .is-style-blank-box-yellow :last-child, .admin-settings .demo .article .is-style-blank-box-green :last-child, .admin-settings .demo .article .is-style-blank-box-pink :last-child, .admin-settings .demo .article .is-style-blank-box-orange :last-child, .admin-settings .demo .article .is-style-sticky-gray :last-child, .admin-settings .demo .article .is-style-sticky-yellow :last-child, .admin-settings .demo .article .is-style-sticky-red :last-child, .admin-settings .demo .article .is-style-sticky-blue :last-child, .admin-settings .demo .article .is-style-sticky-green :last-child, .admin-settings .demo .article .common-icon-box :last-child, .admin-settings .demo .article .info-box :last-child, .admin-settings .demo .article .primary-box :last-child, .admin-settings .demo .article .success-box :last-child, .admin-settings .demo .article .warning-box :last-child, .admin-settings .demo .article .danger-box :last-child, .admin-settings .demo .article .secondary-box :last-child, .admin-settings .demo .article .light-box :last-child, .admin-settings .demo .article .dark-box :last-child, .admin-settings .demo .article .toc :last-child { margin-bottom: 0; }
-.admin-settings .demo .article .entry-content > div > :last-child { margin-bottom: 0; }
 .admin-settings .demo .article div.scrollable-table table, .admin-settings .demo .article .wp-block-table table { margin-bottom: 0; }
 .admin-settings .demo .article .wp-block-table .scrollable-table { margin-bottom: 0; }
 .admin-settings .demo .is-style-information-box, .admin-settings .demo .information-box, .admin-settings .demo .information { background: #f3fafe; border: 1px solid #bde4fc; }
@@ -1425,7 +1425,7 @@ https://codepen.io/nxworld/pen/oLdoWb
 .admin-settings .demo .comment-form .logged-in-as { margin: 0.2em; font-size: 0.8em; }
 .admin-settings .demo .comment-area.website-hide .comment-form-url { display: none; }
 .admin-settings .demo .comment-edit-link { margin-left: 0.4em; }
-.admin-settings .demo .comment-reply-link { font-size: 14px; }
+.admin-settings .demo .comment-reply-link { font-size: 14px; display: inline; padding: 5px 8px; }
 .admin-settings .demo .comment-page-link { text-align: center; }
 .admin-settings .demo .comment-page-link .page-numbers { width: auto; height: auto; padding: 6px 12px; line-height: normal; }
 .admin-settings .demo .comment-page-link .current { background-color: #eee; }
@@ -2228,6 +2228,7 @@ https://codepen.io/nxworld/pen/oLdoWb
 .admin-settings .demo .entry-content { margin-top: 1em; margin-bottom: 3em; }
 .admin-settings .demo pre, .admin-settings .demo pre * { line-height: 1.6; word-wrap: normal; }
 .admin-settings .demo .entry-categories-tags > div { margin-bottom: 0.5em; }
+.admin-settings .demo .entry-categories-tags .tax-icon { margin-right: 0.4em; }
 .admin-settings .demo .ctdt-one-row > div { display: inline-block; }
 .admin-settings .demo .ctdt-category-only .entry-tags { display: none; }
 .admin-settings .demo .ctdt-tag-only .entry-categories { display: none; }
@@ -2279,7 +2280,7 @@ https://codepen.io/nxworld/pen/oLdoWb
 .admin-settings .demo .read-time { text-align: center; font-size: 0.7em; border-top: 4px double #eee; border-bottom: 4px double #eee; margin: 0 3%; margin-bottom: 1em; }
 .admin-settings .demo .eye-catch-wrap { display: flex; }
 .admin-settings .demo .eye-catch { position: relative; margin-bottom: .6em; max-width: 100%; }
-.admin-settings .demo .eye-catch .cat-label { position: absolute; right: auto; top: 0.4em; bottom: auto; left: 0.4em; font-size: 14px; padding: 4px 8px; opacity: 0.9; border: 1px solid #eee; }
+.admin-settings .demo .eye-catch .cat-label { position: absolute; right: auto; top: 0.4em; bottom: auto; left: 0.4em; font-size: 14px; padding: 2px 8px; opacity: 0.9; border: 1px solid #eee; }
 .admin-settings .demo .eye-catch img { vertical-align: bottom; }
 .admin-settings .demo .eye-catch-caption { color: #fff; position: absolute; bottom: 0; padding: 2em 0.6em 0.2em; text-align: right; width: 100%; font-size: 0.9em; background: linear-gradient(180deg, transparent, #555); opacity: 0.9; }
 @media all and (-ms-high-contrast: none) { .admin-settings .demo { /* IE10～ */ }
@@ -2457,7 +2458,6 @@ https://codepen.io/nxworld/pen/oLdoWb
 .admin-settings .demo .is-style-dark-box, .admin-settings .demo .dark-box { color: #1b1e21; background-color: #d6d8d9; border-color: #c6c8ca; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
 .admin-settings .demo .is-style-information-box, .admin-settings .demo .is-style-question-box, .admin-settings .demo .is-style-alert-box, .admin-settings .demo .is-style-memo-box, .admin-settings .demo .is-style-comment-box, .admin-settings .demo .is-style-ok-box, .admin-settings .demo .is-style-ng-box, .admin-settings .demo .is-style-good-box, .admin-settings .demo .is-style-bad-box, .admin-settings .demo .is-style-profile-box, .admin-settings .demo .information-box, .admin-settings .demo .question-box, .admin-settings .demo .alert-box, .admin-settings .demo .information, .admin-settings .demo .question, .admin-settings .demo .alert, .admin-settings .demo .memo-box, .admin-settings .demo .comment-box, .admin-settings .demo .common-icon-box { padding: 20px 20px 20px 72px; border-radius: 4px; position: relative; display: block; }
 .admin-settings .demo .article blockquote :last-child, .admin-settings .demo .article .wp-block-media-text__content :last-child, .admin-settings .demo .article .wp-block-columns :last-child, .admin-settings .demo .article .column-left :last-child, .admin-settings .demo .article .column-center :last-child, .admin-settings .demo .article .column-right :last-child, .admin-settings .demo .article .column-wrap :last-child, .admin-settings .demo .article .timeline-box :last-child, .admin-settings .demo .article .wp-block-cover :last-child, .admin-settings .demo .article .blogcard-type :last-child, .admin-settings .demo .article .btn-wrap :last-child, .admin-settings .demo .article .wp-block-group :last-child, .admin-settings .demo .article .wp-block-gallery :last-child, .admin-settings .demo .article .block-box :last-child, .admin-settings .demo .article .blank-box :last-child, .admin-settings .demo .article .is-style-blank-box-red :last-child, .admin-settings .demo .article .is-style-blank-box-navy :last-child, .admin-settings .demo .article .is-style-blank-box-blue :last-child, .admin-settings .demo .article .is-style-blank-box-yellow :last-child, .admin-settings .demo .article .is-style-blank-box-green :last-child, .admin-settings .demo .article .is-style-blank-box-pink :last-child, .admin-settings .demo .article .is-style-blank-box-orange :last-child, .admin-settings .demo .article .is-style-sticky-gray :last-child, .admin-settings .demo .article .is-style-sticky-yellow :last-child, .admin-settings .demo .article .is-style-sticky-red :last-child, .admin-settings .demo .article .is-style-sticky-blue :last-child, .admin-settings .demo .article .is-style-sticky-green :last-child, .admin-settings .demo .article .common-icon-box :last-child, .admin-settings .demo .article .info-box :last-child, .admin-settings .demo .article .primary-box :last-child, .admin-settings .demo .article .success-box :last-child, .admin-settings .demo .article .warning-box :last-child, .admin-settings .demo .article .danger-box :last-child, .admin-settings .demo .article .secondary-box :last-child, .admin-settings .demo .article .light-box :last-child, .admin-settings .demo .article .dark-box :last-child, .admin-settings .demo .article .toc :last-child { margin-bottom: 0; }
-.admin-settings .demo .article .entry-content > div > :last-child { margin-bottom: 0; }
 .admin-settings .demo .article div.scrollable-table table, .admin-settings .demo .article .wp-block-table table { margin-bottom: 0; }
 .admin-settings .demo .article .wp-block-table .scrollable-table { margin-bottom: 0; }
 .admin-settings .demo .is-style-information-box, .admin-settings .demo .information-box, .admin-settings .demo .information { background: #f3fafe; border: 1px solid #bde4fc; }
@@ -3026,7 +3026,7 @@ https://codepen.io/nxworld/pen/oLdoWb
 .admin-settings .demo .comment-form .logged-in-as { margin: 0.2em; font-size: 0.8em; }
 .admin-settings .demo .comment-area.website-hide .comment-form-url { display: none; }
 .admin-settings .demo .comment-edit-link { margin-left: 0.4em; }
-.admin-settings .demo .comment-reply-link { font-size: 14px; }
+.admin-settings .demo .comment-reply-link { font-size: 14px; display: inline; padding: 5px 8px; }
 .admin-settings .demo .comment-page-link { text-align: center; }
 .admin-settings .demo .comment-page-link .page-numbers { width: auto; height: auto; padding: 6px 12px; line-height: normal; }
 .admin-settings .demo .comment-page-link .current { background-color: #eee; }
@@ -3812,7 +3812,7 @@ https://codepen.io/nxworld/pen/oLdoWb
   .admin-settings .demo #navi .navi-in > .menu-mobile li { width: 50%; height: 40px; line-height: 40px; }
   .admin-settings .demo #navi .navi-in > .menu-mobile li a { font-size: 14px; }
   .admin-settings .demo #navi .navi-in > .menu-mobile li a:after { display: none; }
-  .admin-settings .demo main.main, .admin-settings .demo div.sidebar { padding: 16px 24px; margin: 10px 0; border-width: 0; }
+  .admin-settings .demo main.main, .admin-settings .demo div.sidebar { padding: 16px 20px; margin: 10px 0; border-width: 0; }
   .admin-settings .demo .article ul, .admin-settings .demo .article ol { padding-left: 26px; }
   .admin-settings .demo .entry-card-title, .admin-settings .demo .related-entry-card-title { font-size: 17px; }
   .admin-settings .demo .entry-card-snippet, .admin-settings .demo .related-entry-card-snippet { font-size: 14px; }
@@ -3999,11 +3999,11 @@ https://codepen.io/nxworld/pen/oLdoWb
 ************************************/
 pre { background-color: #f5f6f7; border: 1px solid #ddd; overflow: auto; padding: 10px; }
 
-.is-code-row-number-enable pre, .is-code-row-number-enable pre * { line-height: 1.6 !important; }
+.is-code-row-number-enable pre.hljs, .is-code-row-number-enable pre.hljs * { line-height: 1.6 !important; }
 
-.is-code-row-number-enable pre, .is-code-row-number-enable pre#highlight-demo { border: none; position: relative; padding: 0.4em 1em 0.4em 3em; }
+.is-code-row-number-enable pre.hljs, .is-code-row-number-enable pre.hljs#highlight-demo { border: none; position: relative; padding: 0.4em 1em 0.4em 3em; }
 
-.is-code-row-number-enable pre::before { overflow: hidden; position: absolute; top: 0; left: 0; bottom: 0; display: block; width: 3em; box-sizing: border-box; color: #777; text-align: center; padding: 0.4em 0; }
+.is-code-row-number-enable pre.hljs::before { overflow: hidden; position: absolute; top: 0; left: 0; bottom: 0; display: block; width: 3em; box-sizing: border-box; color: #777; text-align: center; padding: 0.4em 0; }
 
 /*記事一覧のサムネイル幅*/
 .column-thumbnail { width: 80px; }
@@ -4267,7 +4267,6 @@ textarea[name="the_page_memo"] { width: 100%; }
 .components-popover__content .is-style-dark-box, .components-popover__content .dark-box { color: #1b1e21; background-color: #d6d8d9; border-color: #c6c8ca; padding: 15px; border-radius: 4px; margin-bottom: 20px; }
 .components-popover__content .is-style-information-box, .components-popover__content .is-style-question-box, .components-popover__content .is-style-alert-box, .components-popover__content .is-style-memo-box, .components-popover__content .is-style-comment-box, .components-popover__content .is-style-ok-box, .components-popover__content .is-style-ng-box, .components-popover__content .is-style-good-box, .components-popover__content .is-style-bad-box, .components-popover__content .is-style-profile-box, .components-popover__content .information-box, .components-popover__content .question-box, .components-popover__content .alert-box, .components-popover__content .information, .components-popover__content .question, .components-popover__content .alert, .components-popover__content .memo-box, .components-popover__content .comment-box, .components-popover__content .common-icon-box { padding: 20px 20px 20px 72px; border-radius: 4px; position: relative; display: block; }
 .components-popover__content .article blockquote :last-child, .components-popover__content .article .wp-block-media-text__content :last-child, .components-popover__content .article .wp-block-columns :last-child, .components-popover__content .article .column-left :last-child, .components-popover__content .article .column-center :last-child, .components-popover__content .article .column-right :last-child, .components-popover__content .article .column-wrap :last-child, .components-popover__content .article .timeline-box :last-child, .components-popover__content .article .wp-block-cover :last-child, .components-popover__content .article .blogcard-type :last-child, .components-popover__content .article .btn-wrap :last-child, .components-popover__content .article .wp-block-group :last-child, .components-popover__content .article .wp-block-gallery :last-child, .components-popover__content .article .block-box :last-child, .components-popover__content .article .blank-box :last-child, .components-popover__content .article .is-style-blank-box-red :last-child, .components-popover__content .article .is-style-blank-box-navy :last-child, .components-popover__content .article .is-style-blank-box-blue :last-child, .components-popover__content .article .is-style-blank-box-yellow :last-child, .components-popover__content .article .is-style-blank-box-green :last-child, .components-popover__content .article .is-style-blank-box-pink :last-child, .components-popover__content .article .is-style-blank-box-orange :last-child, .components-popover__content .article .is-style-sticky-gray :last-child, .components-popover__content .article .is-style-sticky-yellow :last-child, .components-popover__content .article .is-style-sticky-red :last-child, .components-popover__content .article .is-style-sticky-blue :last-child, .components-popover__content .article .is-style-sticky-green :last-child, .components-popover__content .article .common-icon-box :last-child, .components-popover__content .article .info-box :last-child, .components-popover__content .article .primary-box :last-child, .components-popover__content .article .success-box :last-child, .components-popover__content .article .warning-box :last-child, .components-popover__content .article .danger-box :last-child, .components-popover__content .article .secondary-box :last-child, .components-popover__content .article .light-box :last-child, .components-popover__content .article .dark-box :last-child, .components-popover__content .article .toc :last-child { margin-bottom: 0; }
-.components-popover__content .article .entry-content > div > :last-child { margin-bottom: 0; }
 .components-popover__content .article div.scrollable-table table, .components-popover__content .article .wp-block-table table { margin-bottom: 0; }
 .components-popover__content .article .wp-block-table .scrollable-table { margin-bottom: 0; }
 .components-popover__content .is-style-information-box, .components-popover__content .information-box, .components-popover__content .information { background: #f3fafe; border: 1px solid #bde4fc; }
@@ -4837,3 +4836,5 @@ textarea[name="the_page_memo"] { width: 100%; }
 .tagcloud input { margin-right: 5px; }
 
 .wp-core-ui .button-primary { background: #0071a1 !important; border-color: #0071a1 !important; color: #fff !important; }
+
+.demo .carousel { opacity: 1 !important; }
