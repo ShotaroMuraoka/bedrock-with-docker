@@ -7,5 +7,5 @@ WordPressのボイラープレートである、[bedrock](https://roots.io/bedro
 1. `bedrock` 配下で `composer install`
 1.  `cp .env.example .env`
 1. データベースの接続情報を追記する
-1. gitルートで `docker-compose -f docker-compose.local.yml up -d`
-1. http://localhost:8082 にアクセス
+1. gitルートで `docker compose up -d`
+1. http://localhost:80 にアクセス
